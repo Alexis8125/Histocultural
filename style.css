@@ -10,6 +10,7 @@
 
 body {
     font-family:'poppins', sans-serif;
+    width: 100vw;
 }
 
 .container {
@@ -81,7 +82,7 @@ body {
 }
 
 .header-content h1 {
-    font-size: 75px;
+    font-size: 5vw;
     line-height: 80px;
     color: #f9fafc;
     text-transform: uppercase;
@@ -221,7 +222,7 @@ body {
 
 .general-2 {
     background-image: url(img/bg.jpg);
-    background-position: center center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
     width: 50%; 
@@ -249,6 +250,227 @@ p {
     margin: 25px 0 45px 0;
 }
 
-@media (max-width: 1000px){
+.hamburguer {
+    display: none;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+}
+
+.hamburgueropen {
+    display: block !important;
+    position: absolute;
+    top: 60px;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+@media screen and (max-width: 1020px) {
+    .general{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-2{
+        display: none;
+    }
+    .general-3{
+        display: none;
+    }
+
+    .btn-1{
+        width: 180px;
+    }
+    
+}
+
+@media screen and (max-width: 900px){
+    .general{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-1{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .general-2{
+        display: none;
+    }
+    .general-3{
+        display: none;
+    }
+    .btn-1{
+        width: 180px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+    body{
+        width: 100vw;
+    }
+    .header-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+
+    .coffee-group,
+    .services-group {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hamburguer {
+        display: block;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .general{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-1{
+
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-2{
+        display: none;
+    }
+    .general-3{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .menu {
+        padding: 10px;
+    }
+
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 0.8rem;
+    }
+    .general{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-1{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .general-2{
+        display: none;
+    }
+    .general-3{
+        display: none;
+    }
+}
+
+/* #####Style History##### */
+
+.history-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-video{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.video-history{
+    width: 860px;
+    height: 484px;
+}
+
+.history-zones{
+    background-color:#E1E2E6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(img/bg2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.history-zones>h1{
+    margin-top: 5%;
+}
+
+.zones-video{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-info{
+    height: 198px;
+    width: 350px;
+}
+
+#historical-figures{
     
 }
