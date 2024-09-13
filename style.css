@@ -426,9 +426,16 @@ p {
     align-items: center;
 }
 
-.history-video{
+.title-history{
     margin-top: 5%;
+    font-size: 5vh;
+}
+
+.history-video{
+    /* margin-top: 5%; */
     margin-bottom: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
 .video-history{
@@ -472,5 +479,104 @@ p {
 }
 
 #historical-figures{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+#historical-figures > h2{
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.figure-container{
+    width: 100%;
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.figure-info{
+    width: 25%;
+    border: 1px solid #333;
+    border-radius: 10%;
+    padding: 2%;
+    background-color: #eaccb3;
+}
+
+.figure-info:hover{
+    transform: scale(1.1);
+    transition: all ease-in-out 0.5s;
+    border: 2px solid #c5c5c5;
+    background-color: #CE967B;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); 
+}
+
+.title-figure{
+    display: flex;
+    justify-content: space-around;
+}
+
+.photo-figure{
+    width: 45px;
+    height: 45px;
+    border-radius: 35%;
+}
+
+.figure-text>p{
+    text-align: justify;
+}
+
+#museum{
+    width: 100vw;
+    background-color: #E1E2E6;
+    display: flex;
+    padding: 5%;
+}
+
+.museum-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.museum-info>p{
+    padding: 2%;
+    text-align: justify;
+}
+
+.museum-photo{
+    width: 220px;
+    height: 220px;
+    border: 1px solid #CE967B;
+}
+
+#monuments{
+    width: 100vw;
+    padding: 5%;
+}
+
+.content-monuments{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.photo-monum{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-monum>p{
+    padding: 2%;
+    text-align: justify;
+}
+
+.image-momun{
+    width: 300px;
+    height: 300px;
 }
