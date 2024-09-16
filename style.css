@@ -448,6 +448,56 @@ p {
     height: 300px;
 }
 
+.culture-container{
+    width: 100vw;
+}
+
+#appearances{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appearance-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.video-appearance{
+    width: 860px;
+    height: 484px;
+}
+
+#tours{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.tours-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tour-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+}
+
+
+
 @media screen and (max-width: 1000px) {
     .video-history{
         width: 600px;

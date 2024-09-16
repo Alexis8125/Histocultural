@@ -5,14 +5,189 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura Religiosa</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../estilos.css">
     <link rel="icon" href="../img/new-logo.png" type="png">
+    <!-- Swiper CSS -->
+     <link rel="stylesheet" href="../swiper-bundle.min.css">
+    <style>
+        .header {
+            background-image: linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)),
+                url(../img/img-semana-santa.jpg);
+            /* background-position: center bottom; */
+            background-repeat: no-repeat;
+            background-size:cover;
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+        }
+
+        #festivities{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #c5c5c5;
+        }
+
+        .slide-container{
+            max-width: 1120px;
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .slide-content{
+            margin:0 40px;
+            overflow: hidden;
+            border-radius: 25px;
+        }
+
+        .card{
+            border-radius: 25px;
+            background-color: #E1E2E6;
+        }
+
+        .image-content,
+        .card-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 14px;
+        }
+
+        .image-content{
+            position: relative;
+            row-gap: 5px;
+            padding: 25px 0;
+        }
+
+        .overlay{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            background-color: #4070F4;
+            border-radius: 25px 25px 0 25px;
+        }
+
+        .overlay::before,
+        .overlay::after{
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: -40px;
+            height: 40px;
+            width: 40px;
+            background-color: #c5c5c5;
+        }
+
+        .overlay::after{
+            border-radius: 0 25px 0 0;
+            background-color: #E1E2E6;
+        }
+
+        .card-image{
+            position: relative;
+            height: 150px;
+            width: 150px;
+            background: #c5c5c5;
+            padding: 3px;
+        }
+
+        .card-image .card-video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border: 4px solid #323337;
+        }
+
+        .name{
+            font-size: 18px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .description{
+            font-size: 14px;
+            color: #707070;
+            text-align: center;
+        }
+
+        .button{
+            border: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 8px 16px;
+            background-color: #f9a043;
+            border-radius: 6px;
+            margin: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .button:hover{
+            background: #f27e25;
+        }
+
+        .swiper-navBtn{
+            color: #265df2;
+            transition: color 0.3s ease;
+            display: none;
+        }
+
+        .swiper-navBtn:hover{
+            color: #4070F4;
+            display: none;
+        }
+
+        .swiper-navBtn::before,
+        .swiper-navBtn::after{
+            font-size: 40px;
+            display: none;
+        }
+
+        .swiper-button-next{
+            right: 0;
+            display: none;
+        }
+
+        .swiper-button-prev{
+            left: 0;
+            display: none;
+        }
+
+        .swiper-pagination-bullet{
+            background-color: #265df2;
+            opacity: 1;
+            display: none;
+        }
+
+        .swiper-pagination-bullet-active{
+            background-color: #4070F4;
+            display: none;
+        }
+
+        @media screen and (max-width: 768px){
+            .slide-content{
+                margin: 0 10px;
+            }
+
+            .swiper-navBtn{
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header class="header"></header>
+    <header class="header">
         <div class="menu container">
-            <label for="menu">
-                <img src="img/menu.png" class="menu-icono" alt="">
-            </label>
+            <a href="#" class="logo"><img src="../img/logo.png" width="120px" height="120px" alt="#"
+                    style="padding: 30px;"></a>
+            <div class="hamburguer">
+                <i class="fa-solid fa-bars"></i>
+            </div>
             <nav class="navbar">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
@@ -23,22 +198,259 @@
             </nav>
         </div>
         <div class="header-content container">
-
-            <h1>Histocultural</h1>
-            <p>
-                Adéntrate en un viaje fascinante en este espacio digital, donde adquirirás conocimientos sobre lo que es
-                nuestra
-                querida Ocaña, Norte de Santander. Aquí conocerás acerca de antecedentes históricos como también
-                religiosos, reviviendo
-                historias que se encuentran en cada rincón de nuestra hermosa Ocaña.
-                ¡Bienvenidos a este espacio donde el pasado cobra vida! No te pierdas este maravilloso paseo a través
-                del tiempo.
-            </p>
+            <h1>Cultura Religiosa</h1>
         </div>
     </header>
     
     <div class="culture-container">
-        
+        <section id="appearances">
+            <div class="appearance-info">
+                <h2>Apariciones Religiosas</h2>
+                <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-appearance"></iframe>
+            </div>
+        </section>
+
+        <section id="festivities">
+            <!-- ####INCLUIR CARRUSEL DE PRUEBA -->
+             <h2>Festividades Religiosas</h2>
+             <p>(Desliza con el mouse o el dedo para mover el carrusel)</p>
+             <div class="slide-container swiper">
+                <div class="slide-content">
+                    <div class="card-wrapper swiper-wrapper">
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card swiper-slide">
+                            <div class="image-content">
+                                <span class="overlay"></span>
+
+                                <div class="card-image">
+                                    <!-- Incluir aquí el video -->
+                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
+                                </div>
+                                <div class="card-content">
+                                    <h2 class="name">Lorem Ipsum</h2>
+
+                                    <button class="button">View More</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+             </div>
+             <div class="swiper-button-next swiper-navBtn"></div>
+             <div class="swiper-button-prev swiper-navBtn"></div>
+             <div class="swiper-pagination"></div>
+        </section>
+
+        <section id="tours">
+            <h2>Recorridos Religiosos</h2>
+            <div class="tours-info">
+                <div class="tour-info">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                </div>
+                <div class="tour-info">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                </div>
+                <div class="tour-info">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <section class="general">
+            <div class="general-1">
+                <h2>Geografia</h2>
+                <p>Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183 metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana. Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida cotidiana de los habitantes de Ocaña.</p>
+                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+            </div>
+            <div class="general-2"></div>
+        </section>
+    
+        <section class="general">
+            <div class="general-3"></div>
+            <div class="general-1">
+                <h2>Economia</h2>
+                <p>
+                    Ocaña, un municipio con una amplia variedad de actividades económicas, se destaca por su comercio,
+                    pequeñas industrias y agricultura, especialmente en cultivos como el tabaco, aguacate, cebolla roja,
+                    piña, frijol, frutas y verduras. Además, la minería es importante en la región, con exportaciones de
+                    plata, cobre e hierro. El turismo también es relevante, con sitios históricos como el santuario de
+                    Nuestra Señora de Torcoroma y la columna de la libertad de los esclavos.
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Econom%C3%ADa" class="btn-1">Información</a>
+            </div>
+        </section>
+
+        <section class="general">
+            <div class="general-1">
+                <h2>Geografia</h2>
+                <p>
+                    Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183
+                    metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana.
+                    Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias
+                    en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida
+                    cotidiana de los habitantes de Ocaña.
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+            </div>
+            <div class="general-2"></div>
+        </section>
+
+        <section class="general">
+            <div class="general-3"></div>
+            <div class="general-1">
+                <h2>Economia</h2>
+                <p>
+                    Ocaña, un municipio con una amplia variedad de actividades económicas, se destaca por su comercio,
+                    pequeñas industrias y agricultura, especialmente en cultivos como el tabaco, aguacate, cebolla roja,
+                    piña, frijol, frutas y verduras. Además, la minería es importante en la región, con exportaciones de
+                    plata, cobre e hierro. El turismo también es relevante, con sitios históricos como el santuario de
+                    Nuestra Señora de Torcoroma y la columna de la libertad de los esclavos.
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Econom%C3%ADa" class="btn-1">Información</a>
+            </div>
+        </section>
+
+        <section class="general">
+            <div class="general-1">
+                <h2>Geografia</h2>
+                <p>
+                    Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183
+                    metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana.
+                    Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias
+                    en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida
+                    cotidiana de los habitantes de Ocaña.
+                </p>
+                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+            </div>
+            <div class="general-2"></div>
+        </section>
     </div>
+
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="../img/new-logo.png" alt="Logo Histocultural">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>SOBRE NOSOTROS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            </div>
+            <div class="box">
+                <h2>SIGUENOS</h2>
+                <div class="red-social">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2024 <b>Histocultural</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+     <script src="../js/swiper-bundle.min.js"></script>
+
+     <!-- JavaScript -->
+      <script src="../js/script.js"></script>
+      <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </body>
 </html>
