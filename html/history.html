@@ -7,98 +7,130 @@
 		<link rel="stylesheet" href="../css/main.css" />
 		<link rel="icon" href="../img/logo.png" type="png">
 		<style>
-			.container {
-				max-width: 1200px;
-				margin: 0 auto;
+			li {
+				list-style: none;
 			}
 
+			a {
+				text-decoration: none;
+			}
+
+			/* css to reset all the designs */
+
+			/* add styles on elements */
+
 			.header {
+				border-bottom: 1px solid #E2E8F0;
+				/* background-color: #222; */
 				background-image: linear-gradient(
 					rgba(0,0,0,0.7),
 					rgba(0,0,0,0.7)),
-					url(../img/la-gran-convencion.jpg);
+					url(../img/HOJAS.jpg);
 				background-position: center bottom;
 				background-repeat: no-repeat;
 				background-size: cover;
-				min-height: 70vh;
+				height: 530px;
+			}
+
+			.navbar {
 				display: flex;
-				align-items: center;
-				
-			}
-
-			ul{
-				list-style-type: none;
-			}
-
-			li{
-				list-style: none;
-				text-decoration: none;
-			}
-
-			.menu {
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				display: flex;
-				align-items: center;
 				justify-content: space-between;
-			}
-
-			.logo {
-				color: #fffdfc;
+				align-items: center;
+				padding: 1.5rem 1.5rem;
 				font-size: 25px;
-				font-weight: 800;
 			}
 
-			.menu .navbar ul li {
-				position: relative;
-				float: left;
+			.hamburger {
+				display: none;
 			}
 
-			.menu .navbar ul li a {
-				font-size: 18px;
-				padding: 20px;
-				color: #fffdfc;
+			.bar {
 				display: block;
-				font-weight: 600;
-				text-decoration: none;
-			}
-
-			.menu .navbar ul li a:hover{
-				color: #CE967B;
-			}
-
-			#menu {
-				display: none;
-			}
-
-			.menu-icono {
 				width: 25px;
+				height: 3px;
+				margin: 5px auto;
+				-webkit-transition: all 0.3s ease-in-out;
+				transition: all 0.3s ease-in-out;
+				/* background-color: #101010; */
+				background-color: #fff;
 			}
 
-			.menu label {
-				cursor: pointer;
-				display: none;
+			.nav-menu {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
 			}
 
-			.header-content {
-				text-align: center;
+			.nav-item {
+				margin-left: 5rem;
 			}
 
-			.header-content h1 {
-				font-size: 5vw;
-				line-height: 80px;
-				color: #f9fafc;
-				text-transform: uppercase;
-				margin-bottom: 35px;
+			.nav-link {
+				/* font-size: 1.6rem; */
+				font-size: 2rem;
+				font-weight: 400;
+				/* color: #475569; */
+				color: #fff;
+				/* change */
 			}
 
-			.header-content p {
-				font-size: 16px;
-				color: #c5c5c5;
-				padding: 0 250px;
-				margin-bottom: 25px;
+			.nav-link:hover {
+				color: #482ff7;
+			}
+
+			.nav-logo {
+				/* font-size: 2.1rem; */
+				font-size: 3rem;
+				font-weight: 500;
+				/* color: #482ff7; */
+				color: #fff;
+			}
+
+			@media only screen and (max-width: 768px) {
+				.nav-menu {
+					position: fixed;
+					left: -100%;
+					top: 5rem;
+					flex-direction: column;
+					/* background-color: #fff; */
+					background-color: #222;
+					width: 100%;
+					border-radius: 10px;
+					text-align: center;
+					transition: 0.3s;
+					box-shadow:
+						0 10px 27px rgba(0, 0, 0, 0.05);
+				}
+
+				.nav-link {
+					color: #fff;
+				}
+
+				.nav-menu.active {
+					left: 0;
+				}
+
+				.nav-item {
+					margin: 2.5rem 0;
+				}
+
+				.hamburger {
+					display: block;
+					cursor: pointer;
+				}
+
+				.hamburger.active .bar:nth-child(2) {
+					opacity: 0;
+				}
+
+				.hamburger.active .bar:nth-child(1) {
+					transform: translateY(8px) rotate(45deg);
+				}
+
+				.hamburger.active .bar:nth-child(3) {
+					transform: translateY(-8px) rotate(-45deg);
+				}
+
 			}
 
 			.history-zones{
@@ -269,25 +301,31 @@
 		</style>
 	</head>
 	<body class="is-preload">
-
 		<header class="header">
-			<div class="menu container">
-				<a href="#" class="logo"><img src="../img/logo.png" width="120px" height="120px" alt="#"
-						style="padding: 30px;"></a>
-				<div class="hamburguer">
-					<i class="fa-solid fa-bars"></i>
+			<nav class="navbar">
+				<a href="#" class="nav-logo"><img src="../img/logo.png" alt="Logo" width="120px" height="120px"></a>
+				<ul class="nav-menu">
+					<li class="nav-item">
+						<a href="../index.html" class="nav-link" style="font-size: 25px;">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a href="../html/history.html" class="nav-link" style="font-size: 25px;"">Historia</a>
+					</li>
+					<li class="nav-item">
+						<a href="../html/cultura_religiosa.html" class="nav-link" style="font-size: 25px;"">Cultura Religiosa</a>
+					</li>
+					<li class="nav-item">
+						<a href="../html/arte.html" class="nav-link" style="font-size: 25px;"">Arte Ocañero</a>
+					</li>
+				</ul>
+				<div class="hamburger">
+					<span class="bar"></span>
+					<span class="bar"></span>
+					<span class="bar"></span>
 				</div>
-				<nav class="navbar">
-					<ul>
-						<li><a href="../index.html">Inicio</a></li>
-						<li><a href="../html/historia.html">Historia</a></li>
-						<li><a href="../html/cultura_religiosa.html">Cultura Religiosa</a></li>
-						<li><a href="../html/arte.html">Arte Ocañera</a></li>
-					</ul>
-				</nav>
-			</div>
+			</nav>
 			<div class="header-content container">
-				<h1>Historia</h1>
+				<center><h1 style="color: #fff; font-size: 5vw; text-transform: uppercase;">Historia</h1></center>
 			</div>
 		</header>
 
@@ -299,9 +337,6 @@
 						<div class="content">
 							<h2>Fundación y Época Colonial</h2>
 							<p>Ocaña fue fundada el 14 de diciembre de 1570 por el capitán español Francisco Fernández de Contreras bajo el nombre de Santa Ana de Ocaña. Desde su fundación, la ciudad se estableció como un centro estratégico para la conquista y colonización de la región, sirviendo como un punto clave para el comercio entre el interior de Nueva Granada y la costa Caribe. En esta etapa, Ocaña también desempeñó un papel en la evangelización de los pueblos indígenas locales, como los Hacaritama.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/fundacion.jpg" alt="" />
@@ -313,9 +348,6 @@
 						<div class="content">
 							<h2>La Independencia y la Convención de Ocaña</h2>
 							<p>Ocaña tuvo un papel destacado en la independencia de Colombia, apoyando activamente los movimientos independentistas. En 1828, la ciudad fue sede de la Convención de Ocaña, un intento de reformar la Constitución de 1821 de la Gran Colombia. Este evento reveló profundas divisiones políticas entre los partidarios de Simón Bolívar y los seguidores de Francisco de Paula Santander. El fracaso de la convención condujo a un aumento de las tensiones que eventualmente provocaron la disolución de la Gran Colombia en 1831.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/independencia.jpg" alt="" />
@@ -329,9 +361,6 @@
 							<p>En la actualidad, Ocaña es una ciudad que combina su patrimonio cultural e histórico con el desarrollo económico. Continúa siendo un centro importante para la agricultura y el comercio, y se ha diversificado en sectores como el turismo, aprovechando su riqueza natural y arquitectónica, como el Parque Nacional Natural Los Estoraques y el Complejo Histórico de la Gran Convención.
 
 								La historia de Ocaña refleja la capacidad de la ciudad para adaptarse y prosperar a pesar de los desafíos, destacándose como un referente cultural y económico en el norte de Colombia.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/panoramica_ocaña.jpg" alt="" />
@@ -348,7 +377,7 @@
 							<div class="gallery style2 medium lightbox onscroll-fade-in">
 								<article>
 									<a href="../img/antonia-santos.jpg" class="image">
-										<img src="../img/antonia-santos.jpg" alt="Antonia Santos" />
+										<img src="../img/antonia-santos.jpg" alt="Antonia Santos" style="width: 360px; height: 360px;"/>
 									</a>
 									<div class="caption">
 										<h3>Antonia Santos Plata (1782-1819)</h3>
@@ -360,7 +389,7 @@
 								</article>
 								<article>
 									<a href="../img/cordero.jpg" class="image">
-										<img src="images/gallery/thumbs/02.jpg" alt="" />
+										<img src="../img/cordero.jpg" alt="" style="width: 360px; height: 360px;" />
 									</a>
 									<div class="caption">
 										<h3>General Rafael María Cordero (1795-1868)</h3>
@@ -371,8 +400,8 @@
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/03.jpg" class="image">
-										<img src="images/gallery/thumbs/03.jpg" alt="" />
+									<a href="../img/jose-eusebio-caro.jpg" class="image">
+										<img src="../img/jose-eusebio-caro.jpg" alt="" style="width: 360px; height: 360px;"/>
 									</a>
 									<div class="caption">
 										<h3>José Eusebio Caro (1817-1853)</h3>
@@ -383,8 +412,8 @@
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/04.jpg" class="image">
-										<img src="images/gallery/thumbs/04.jpg" alt="" />
+									<a href="../img/migueñ-antonio.jpg" class="image">
+										<img src="../img/migueñ-antonio.jpg" alt="" style="width: 360px; height: 360px;"/>
 									</a>
 									<div class="caption">
 										<h3>Miguel Antonio Caro (1843-1909)</h3>
@@ -395,8 +424,8 @@
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/05.jpg" class="image">
-										<img src="images/gallery/thumbs/05.jpg" alt="" />
+									<a href="../img/eduardo-paez.jpg" class="image">
+										<img src="../img/eduardo-paez.jpg" alt="" style="width: 360px; height: 360px;"/>
 									</a>
 									<div class="caption">
 										<h3>Luis Eduardo Páez Courvel (1936-2009)</h3>
@@ -407,13 +436,37 @@
 									</div>
 								</article>
 								<article>
-									<a href="images/gallery/fulls/06.jpg" class="image">
-										<img src="images/gallery/thumbs/06.jpg" alt="" />
+									<a href="../img/federico-acosta.jpg" class="image">
+										<img src="../img/federico-acosta.jpg" alt="" style="width: 360px; height: 360px;"/>
 									</a>
 									<div class="caption">
 										<h3>Federico Lleras Acosta (1877-1938)
 										</h3>
 										<p>Científico y médico nacido en Ocaña, famoso por su trabajo en el estudio de enfermedades tropicales. Su contribución al entendimiento y tratamiento de la lepra y la malaria le valió reconocimiento internacional. Lleras Acosta es una de las figuras más importantes en la historia médica de Colombia.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="../img/agustina-ferro.jpg" class="image">
+										<img src="../img/agustina-ferro.jpg" alt="" style="width: 360px; height: 360px;"/>
+									</a>
+									<div class="caption">
+										<h3>Agustina Ferro (1770-1820)</h3>
+										<p>Agustina Ferro, nacida en Ocaña, fue una patriota que apoyó la causa independentista de Colombia. Contribuyó brindando recursos y apoyo a los insurgentes durante las guerras de independencia, demostrando su valentía y compromiso con la lucha por la libertad.</p>
+										<ul class="actions fixed">
+											<li><span class="button small">Details</span></li>
+										</ul>
+									</div>
+								</article>
+								<article>
+									<a href="../img/barbara-lemus.jpg" class="image">
+										<img src="../img/barbara-lemus.jpg" alt="" style="width: 360px; height: 360px;"/>
+									</a>
+									<div class="caption">
+										<h3>Bárbara Vicenta Lemus (1798-1884)</h3>
+										<p>Bárbara Vicenta Lemus, también ocañera, fue una destacada colaboradora de las tropas patriotas durante la independencia. A lo largo de su vida, fue testigo de la consolidación de la República, representando el importante rol de las mujeres en la construcción de la nación.</p>
 										<ul class="actions fixed">
 											<li><span class="button small">Details</span></li>
 										</ul>
@@ -476,9 +529,6 @@
 						<div class="content">
 							<h2>Columna de la Libertad de los Esclavos</h2>
 							<p>Este es uno de los monumentos más significativos de Ocaña. Fue erigido en 1851 para conmemorar la abolición de la esclavitud en Colombia. Se encuentra en el Parque 29 de Mayo y simboliza la lucha por la libertad y los derechos humanos. La columna es un recordatorio de la historia de la esclavitud y el proceso de emancipación que vivió el país.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/columna-esclavos.jpg" alt="" />
@@ -490,9 +540,6 @@
 						<div class="content">
 							<h2>Monumento a José Eusebio Caro</h2>
 							<p>Este monumento está dedicado a José Eusebio Caro, poeta, filósofo y cofundador del Partido Conservador Colombiano. Se encuentra en un parque de la ciudad y es una conmemoración a su legado literario y político, así como su contribución a la historia de Colombia.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/caro-estatua.jpeg" alt="" />
@@ -504,9 +551,6 @@
 						<div class="content">
 							<h2>Monumento a la Gran Convención de Ocaña</h2>
 							<p>Ubicado en el Complejo Histórico de la Gran Convención, este monumento conmemora la Convención de Ocaña de 1828, donde se discutieron reformas constitucionales clave para el país. Este evento es un símbolo de la importancia de Ocaña en la historia política de Colombia.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
 						</div>
 						<div class="image">
 							<img src="../img/monumento-gran-convencion.jpeg" alt="" />
@@ -551,5 +595,29 @@
 		 <script src="../js/util.js"></script>
 		 <script src="../js/main.js"></script>
 		 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+		 <script>
+			const hamburger = document.querySelector(".hamburger");
+			const navMenu = document.querySelector(".nav-menu");
+
+			hamburger.addEventListener("click", mobileMenu);
+
+			function mobileMenu() {
+				hamburger.classList.toggle("active");
+				navMenu.classList.toggle("active");
+			}
+
+
+			// when we click on hamburger icon its close 
+
+			const navLink = document.querySelectorAll(".nav-link");
+
+			navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+			function closeMenu() {
+				hamburger.classList.remove("active");
+				navMenu.classList.remove("active");
+			}
+		 </script>
 	</body>
 </html>
