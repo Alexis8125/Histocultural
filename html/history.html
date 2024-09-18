@@ -32,6 +32,7 @@
 
 			li{
 				list-style: none;
+				text-decoration: none;
 			}
 
 			.menu {
@@ -99,6 +100,127 @@
 				padding: 0 250px;
 				margin-bottom: 25px;
 			}
+
+			.history-zones{
+    background-color:#E1E2E6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.history-zones>h1{
+    margin-top: 5%;
+}
+
+.zones-video{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video>h3{
+    margin: 20px 0 10px 0;
+}
+
+.video-info{
+    height: 198px;
+    width: 350px;
+}
+
+/*:::::Pie de Pagina*/
+.pie-pagina{
+    width: 100%;
+    /* background-color: #0a141d; */
+    background-color: #1e1d1b;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:50px;
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 250px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: #efefef;
+    margin-bottom: 10px;
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    margin-right: 10px;
+    /* background-color: #0d2033; */
+    background-color: #f9a043;
+    text-align: center;
+    transition: all 300ms ease;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    /* color: aqua; */
+    color: #f27e25;
+}
+.pie-pagina .grupo-2{
+    /* background-color: #0a1a2a; */
+    background-color: #3c2e29;
+    padding: 15px 10px;
+    text-align: center;
+    color: #fff;
+}
+.pie-pagina .grupo-2 small{
+    font-size: 15px;
+}
+@media screen and (max-width:800px){
+    .pie-pagina .grupo-1{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap:30px;
+        padding: 35px 0px;
+    }
+
+	.history-zones{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.zones-video{
+		display: flex;
+		flex-direction: column;
+	}
+}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -254,9 +376,70 @@
 								</article>
 							</div>
 					</section>
-
+					<div class="history-zones">
+						<h1>Historia de los centros poblados</h1>
+						<div class="zones-video">
+							<div class="video">
+								<h3>Aguaclaras</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+							<div class="video">
+								<h3>Buenavista</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+						</div>
+						<div class="zones-video">
+							<div class="video">
+								<h3>La Ermita</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+							<div class="video">
+								<h3>La Floresta</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+						</div>
+						<div class="zones-video">
+							<div class="video">
+								<h3>Otare</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+							<div class="video">
+								<h3>Pueblo nuevo</h3>
+								<iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+							</div>
+						</div>
+					</div>
 			</div>
 
+			<footer class="pie-pagina">
+				<div class="grupo-1">
+					<div class="box">
+						<figure>
+							<a href="#">
+								<img src="../img/new-logo.png" alt="Logo Histocultural">
+							</a>
+						</figure>
+					</div>
+					<div class="box">
+						<h2>SOBRE NOSOTROS</h2>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+					</div>
+					<div class="box">
+						<h2>SIGUENOS</h2>
+						<div class="red-social">
+							<a href="#" class="fa fa-facebook"></a>
+							<a href="#" class="fa fa-instagram"></a>
+							<a href="#" class="fa fa-twitter"></a>
+							<a href="#" class="fa fa-youtube"></a>
+						</div>
+					</div>
+				</div>
+				<div class="grupo-2">
+					<small>&copy; 2024 <b>Histocultural</b> - Todos los Derechos Reservados.</small>
+				</div>
+			</footer>
+			
 		<!-- Scripts -->
 		 <script src="../js/jquery.min.js"></script>
 		 <script src="../js/jquery.scrollex.min.js"></script>
@@ -265,6 +448,5 @@
 		 <script src="../js/breakpoints.min.js"></script>
 		 <script src="../js/util.js"></script>
 		 <script src="../js/main.js"></script>
-
 	</body>
 </html>
