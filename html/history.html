@@ -102,125 +102,170 @@
 			}
 
 			.history-zones{
-    background-color:#E1E2E6;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url(../img/bg2.png);
-    background-repeat: no-repeat;
-    background-position: right;
-}
+				background-color:#E1E2E6;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				background-image: url(../img/bg2.png);
+				background-repeat: no-repeat;
+				background-position: right;
+			}
 
-.history-zones>h1{
-    margin-top: 5%;
-}
+			.history-zones>h1{
+				margin-top: 5%;
+			}
 
-.zones-video{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 5%;
-}
+			.zones-video{
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				margin-bottom: 5%;
+			}
 
-.video{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+			.video{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
 
-.video>h3{
-    margin: 20px 0 10px 0;
-}
+			.video>h3{
+				margin: 20px 0 10px 0;
+			}
 
-.video-info{
-    height: 198px;
-    width: 350px;
-}
+			.video-info{
+				height: 198px;
+				width: 350px;
+			}
 
-/*:::::Pie de Pagina*/
-.pie-pagina{
-    width: 100%;
-    /* background-color: #0a141d; */
-    background-color: #1e1d1b;
-}
-.pie-pagina .grupo-1{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap:50px;
-    padding: 45px 0px;
-}
-.pie-pagina .grupo-1 .box figure{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pie-pagina .grupo-1 .box figure img{
-    width: 250px;
-}
-.pie-pagina .grupo-1 .box h2{
-    color: #fff;
-    margin-bottom: 25px;
-    font-size: 20px;
-}
-.pie-pagina .grupo-1 .box p{
-    color: #efefef;
-    margin-bottom: 10px;
-}
-.pie-pagina .grupo-1 .red-social a{
-    display: inline-block;
-    text-decoration: none;
-    width: 45px;
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    margin-right: 10px;
-    /* background-color: #0d2033; */
-    background-color: #f9a043;
-    text-align: center;
-    transition: all 300ms ease;
-}
-.pie-pagina .grupo-1 .red-social a:hover{
-    /* color: aqua; */
-    color: #f27e25;
-}
-.pie-pagina .grupo-2{
-    /* background-color: #0a1a2a; */
-    background-color: #3c2e29;
-    padding: 15px 10px;
-    text-align: center;
-    color: #fff;
-}
-.pie-pagina .grupo-2 small{
-    font-size: 15px;
-}
-@media screen and (max-width:800px){
-    .pie-pagina .grupo-1{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap:30px;
-        padding: 35px 0px;
-    }
+			#museum{
+				width: 100vw;
+				background-color: #fff;
+				display: flex;
+				padding: 5%;
+				flex-direction: column;
+			}
 
-	.history-zones{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+			.museum-container{
+				display: flex;
+				width: 100%;
+			}
 
-	.zones-video{
-		display: flex;
-		flex-direction: column;
-	}
-}
+			.museum-info{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.museum-info>p{
+				padding: 2%;
+				text-align: justify;
+			}
+
+			.museum-photo{
+				width: 220px;
+				height: 220px;
+				border: 1px solid #CE967B;
+			}
+
+			/*:::::Pie de Pagina*/
+			.pie-pagina{
+				width: 100%;
+				/* background-color: #0a141d; */
+				background-color: #1e1d1b;
+			}
+			.pie-pagina .grupo-1{
+				width: 100%;
+				max-width: 1200px;
+				margin: auto;
+				display:grid;
+				grid-template-columns: repeat(3, 1fr);
+				grid-gap:50px;
+				padding: 45px 0px;
+			}
+			.pie-pagina .grupo-1 .box figure{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.pie-pagina .grupo-1 .box figure img{
+				width: 250px;
+			}
+			.pie-pagina .grupo-1 .box h2{
+				color: #fff;
+				margin-bottom: 25px;
+				font-size: 20px;
+			}
+			.pie-pagina .grupo-1 .box p{
+				color: #efefef;
+				margin-bottom: 10px;
+			}
+			.pie-pagina .grupo-1 .red-social a{
+				display: inline-block;
+				text-decoration: none;
+				width: 45px;
+				height: 45px;
+				line-height: 45px;
+				color: #fff;
+				margin-right: 10px;
+				/* background-color: #0d2033; */
+				background-color: #f9a043;
+				text-align: center;
+				transition: all 300ms ease;
+			}
+			.pie-pagina .grupo-1 .red-social a:hover{
+				/* color: aqua; */
+				color: #f27e25;
+			}
+			.pie-pagina .grupo-2{
+				/* background-color: #0a1a2a; */
+				background-color: #3c2e29;
+				padding: 15px 10px;
+				text-align: center;
+				color: #fff;
+			}
+			.pie-pagina .grupo-2 small{
+				font-size: 15px;
+			}
+			@media screen and (max-width:800px){
+				.pie-pagina .grupo-1{
+					width: 90%;
+					grid-template-columns: repeat(1, 1fr);
+					grid-gap:30px;
+					padding: 35px 0px;
+				}
+
+				.history-zones{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.zones-video{
+					display: flex;
+					flex-direction: column;
+				}
+
+				#museum{
+					display: flex;
+					flex-direction: column;
+				}
+
+				.museum-container{
+					display: flex;
+					flex-direction: column;
+				}
+
+				.museum-info{
+					display: flex;
+					flex-direction: column;
+				}
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -409,6 +454,64 @@
 							</div>
 						</div>
 					</div>
+					<section id="museum">
+						<center><h2>Museos</h2></center>
+						<div class="museum-container">
+							<div class="museum-info">
+								<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjjLPisrIPKUfFMRo-45EsYfFzX0NYl4WNP3dHqFGI0kjqhrpLW8vdK1tp0zjVluOQVFLLZYZSa24_zzISW0nqsZOEfamVIB5EuyoEG8F1WzoadQ2j04-QtncLX7TXHetHcoObjaqbtVswn/s1600/Fachada+Anton+Garcia+Oca%25C3%25B1a%25281%2529.jpg" alt="Fotografia Museo Antón García de Bonilla" class="museum-photo">
+								<p><strong>Museo "Antón García de Bonilla" <br></strong>
+									El Museo "Antón García de Bonilla", fundado en 1973 en Ocaña, Colombia, se dedica a investigar y preservar la historia de la región. Muestra cerca de 300 piezas que abarcan desde el periodo precolombino hasta la actualidad, incluyendo objetos históricos y culturales significativos de la antigua provincia de Ocaña. Es un espacio que celebra la memoria histórica local. 
+								</p>
+			               </div>
+							<div class="museum-info">
+								<img src="https://fastly.4sqi.net/img/general/600x600/133519382_ghVWrekBjVu4-qv8qsVU8wqyJcqstNPISUDMrCHMpAQ.jpg" alt="Museo de la Gran Convención" class="museum-photo">
+								<p><strong>Museo de la Gran Convención <br></strong>
+									El Museo de la Gran Convención, ubicado en Ocaña, Colombia, es un espacio histórico que conmemora la convención de 1828. Alberga exposiciones permanentes y temporales que destacan la cultura y la historia de la región. Su arquitectura colonial incluye el templo de San Francisco y el antiguo convento, ofreciendo un recorrido significativo por la historia local. 
+								</p>
+							</div>
+						</div>
+					 </section>
+					 <center><h2>Monumentos Historicos</h2></center>
+					 <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Columna de la Libertad de los Esclavos</h2>
+							<p>Este es uno de los monumentos más significativos de Ocaña. Fue erigido en 1851 para conmemorar la abolición de la esclavitud en Colombia. Se encuentra en el Parque 29 de Mayo y simboliza la lucha por la libertad y los derechos humanos. La columna es un recordatorio de la historia de la esclavitud y el proceso de emancipación que vivió el país.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="../img/columna-esclavos.jpg" alt="" />
+						</div>
+					</section>
+
+				<!-- Three -->
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Monumento a José Eusebio Caro</h2>
+							<p>Este monumento está dedicado a José Eusebio Caro, poeta, filósofo y cofundador del Partido Conservador Colombiano. Se encuentra en un parque de la ciudad y es una conmemoración a su legado literario y político, así como su contribución a la historia de Colombia.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="../img/caro-estatua.jpeg" alt="" />
+						</div>
+					</section>
+
+				<!-- Four -->
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Monumento a la Gran Convención de Ocaña</h2>
+							<p>Ubicado en el Complejo Histórico de la Gran Convención, este monumento conmemora la Convención de Ocaña de 1828, donde se discutieron reformas constitucionales clave para el país. Este evento es un símbolo de la importancia de Ocaña en la historia política de Colombia.</p>
+							<ul class="actions stacked">
+								<li><a href="#" class="button">Learn More</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="../img/monumento-gran-convencion.jpeg" alt="" />
+						</div>
+					</section>
 			</div>
 
 			<footer class="pie-pagina">
@@ -422,8 +525,7 @@
 					</div>
 					<div class="box">
 						<h2>SOBRE NOSOTROS</h2>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+						<p>Histocultural es una plataforma dedicada a preservar y compartir la historia y cultura de Ocaña, Norte de Santander. Nuestro propósito es conectar a las personas con el legado de nuestra ciudad, destacando eventos clave como la Convención de 1828, personajes como Antonia Santos, y monumentos emblemáticos como la Columna de la Libertad de los Esclavos. A través de contenidos accesibles y educativos, buscamos promover el orgullo ocañero y mantener vivas nuestras tradiciones para las generaciones futuras.</p>
 					</div>
 					<div class="box">
 						<h2>SIGUENOS</h2>
@@ -448,5 +550,6 @@
 		 <script src="../js/breakpoints.min.js"></script>
 		 <script src="../js/util.js"></script>
 		 <script src="../js/main.js"></script>
+		 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 	</body>
 </html>
