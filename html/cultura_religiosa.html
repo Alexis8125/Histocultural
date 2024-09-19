@@ -4,201 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura Religiosa</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../estilos.css">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="icon" href="../img/new-logo.png" type="png">
-    <!-- Swiper CSS -->
-     <link rel="stylesheet" href="../swiper-bundle.min.css">
     <style>
+        a{
+            text-decoration: none;
+        }
+
         .header {
+            border-bottom: 1px solid #E2E8F0;
+            /* background-color: #222; */
             background-image: linear-gradient(
                 rgba(0,0,0,0.7),
                 rgba(0,0,0,0.7)),
                 url(../img/img-semana-santa.jpg);
-            /* background-position: center bottom; */
+            background-position: center bottom;
             background-repeat: no-repeat;
-            background-size:cover;
-            min-height: 70vh;
-            display: flex;
-            align-items: center;
-        }
-
-        #festivities{
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: #c5c5c5;
-        }
-
-        .slide-container{
-            max-width: 1120px;
-            width: 100%;
-            padding: 40px 0;
-        }
-
-        .slide-content{
-            margin:0 40px;
-            overflow: hidden;
-            border-radius: 25px;
-        }
-
-        .card{
-            border-radius: 25px;
-            background-color: #E1E2E6;
-        }
-
-        .image-content,
-        .card-content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 10px 14px;
-        }
-
-        .image-content{
-            position: relative;
-            row-gap: 5px;
-            padding: 25px 0;
-        }
-
-        .overlay{
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            background-color: #4070F4;
-            border-radius: 25px 25px 0 25px;
-        }
-
-        .overlay::before,
-        .overlay::after{
-            content: '';
-            position: absolute;
-            right: 0;
-            bottom: -40px;
-            height: 40px;
-            width: 40px;
-            background-color: #c5c5c5;
-        }
-
-        .overlay::after{
-            border-radius: 0 25px 0 0;
-            background-color: #E1E2E6;
-        }
-
-        .card-image{
-            position: relative;
-            height: 150px;
-            width: 150px;
-            background: #c5c5c5;
-            padding: 3px;
-        }
-
-        .card-image .card-video{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            border: 4px solid #323337;
-        }
-
-        .name{
-            font-size: 18px;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .description{
-            font-size: 14px;
-            color: #707070;
-            text-align: center;
-        }
-
-        .button{
-            border: none;
-            font-size: 16px;
-            color: #fff;
-            padding: 8px 16px;
-            background-color: #f9a043;
-            border-radius: 6px;
-            margin: 14px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .button:hover{
-            background: #f27e25;
-        }
-
-        .swiper-navBtn{
-            color: #265df2;
-            transition: color 0.3s ease;
-            display: none;
-        }
-
-        .swiper-navBtn:hover{
-            color: #4070F4;
-            display: none;
-        }
-
-        .swiper-navBtn::before,
-        .swiper-navBtn::after{
-            font-size: 40px;
-            display: none;
-        }
-
-        .swiper-button-next{
-            right: 0;
-            display: none;
-        }
-
-        .swiper-button-prev{
-            left: 0;
-            display: none;
-        }
-
-        .swiper-pagination-bullet{
-            background-color: #265df2;
-            opacity: 1;
-            display: none;
-        }
-
-        .swiper-pagination-bullet-active{
-            background-color: #4070F4;
-            display: none;
-        }
-
-        @media screen and (max-width: 768px){
-            .slide-content{
-                margin: 0 10px;
-            }
-
-            .swiper-navBtn{
-                display: none;
-            }
+            background-size: cover;
+            height: 530px;
         }
     </style>
 </head>
 <body>
     <header class="header">
-        <div class="menu container">
-            <a href="#" class="logo"><img src="../img/logo.png" width="120px" height="120px" alt="#"
-                    style="padding: 30px;"></a>
-            <div class="hamburguer">
-                <i class="fa-solid fa-bars"></i>
+        <nav class="navbar">
+            <a href="#" class="nav-logo"><img src="../img/logo.png" alt="Logo" width="120px" height="120px"></a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link" style="font-size: 25px;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../html/history.html" class="nav-link" style="font-size: 25px;"">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../html/cultura_religiosa.html" class="nav-link" style="font-size: 25px;"">Cultura Religiosa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../html/arte.html" class="nav-link" style="font-size: 25px;"">Arte Ocañero</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="../html/historia.html">Historia</a></li>
-                    <li><a href="../html/cultura_religiosa.html">Cultura Religiosa</a></li>
-                    <li><a href="../html/arte.html">Arte Ocañera</a></li>
-                </ul>
-            </nav>
-        </div>
+        </nav>
         <div class="header-content container">
-            <h1>Cultura Religiosa</h1>
+            <strong><center><h1 style="color: #fff; font-size: 5vh; text-transform: uppercase; font-weight: bold;">Cultura Religiosa</h1></center></strong>
         </div>
     </header>
     
@@ -206,251 +60,224 @@
         <section id="appearances">
             <div class="appearance-info">
                 <h2>Apariciones Religiosas</h2>
-                <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-appearance"></iframe>
+                <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-appearance" style="margin-bottom: 2%;"></iframe>
             </div>
         </section>
 
-        <section id="festivities">
-            <!-- ####INCLUIR CARRUSEL DE PRUEBA -->
-             <h2>Festividades Religiosas</h2>
-             <p>(Desliza con el mouse o el dedo para mover el carrusel)</p>
-             <div class="slide-container swiper">
-                <div class="slide-content">
-                    <div class="card-wrapper swiper-wrapper">
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+        <section class="wrapper style1 align-center">
+            <div class="inner">
+                <h2 style="margin-top: 5%;">Festividades Religiosas</h2>
+                <p>En Ocaña, las festividades religiosas son momentos clave que reflejan la fe y la devoción de la comunidad. Estas festividades no solo refuerzan el sentido espiritual, sino que también son una oportunidad para la unión comunitaria y el mantenimiento de las tradiciones locales.</p>
+            </div>
+            <!-- Gallery -->
+                <div class="gallery style2 medium lightbox onscroll-fade-in">
+                    <article>
+                        <a href="../img/antonia-santos.jpg" class="image">
+                            <img src="../img/antonia-santos.jpg" alt="Antonia Santos" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Antonia Santos Plata (1782-1819)</h3>
+                            <p>Heroína de la independencia, nacida cerca de Ocaña. Lideró la guerrilla Los Coromoros, que apoyó a las fuerzas de Simón Bolívar en la lucha contra el dominio español. Fue capturada y ejecutada en 1819, convirtiéndose en un símbolo de resistencia y patriotismo</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/cordero.jpg" class="image">
+                            <img src="../img/cordero.jpg" alt="" style="width: 360px; height: 360px;" />
+                        </a>
+                        <div class="caption">
+                            <h3>General Rafael María Cordero (1795-1868)</h3>
+                            <p>Militar destacado de Ocaña que luchó en las guerras de independencia. Posteriormente, participó en conflictos civiles, como la Guerra de los Supremos, defendiendo los ideales republicanos. Su carrera militar lo posicionó como una figura de gran relevancia en la historia militar del país.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/jose-eusebio-caro.jpg" class="image">
+                            <img src="../img/jose-eusebio-caro.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>José Eusebio Caro (1817-1853)</h3>
+                            <p>Filósofo, poeta y político que pasó parte de su vida en Ocaña. Fue cofundador del Partido Conservador de Colombia. Su influencia como pensador político y su legado como poeta lo destacan como una de las mentes más influyentes del siglo XIX en Colombia.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/migueñ-antonio.jpg" class="image">
+                            <img src="../img/migueñ-antonio.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Miguel Antonio Caro (1843-1909)</h3>
+                            <p>Hijo de José Eusebio Caro, fue presidente de Colombia entre 1892 y 1898. Coautor de la Constitución de 1886, dejó una profunda huella en la historia política del país, defendiendo el centralismo y las ideas conservadoras.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/eduardo-paez.jpg" class="image">
+                            <img src="../img/eduardo-paez.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Luis Eduardo Páez Courvel (1936-2009)</h3>
+                            <p>Historiador y escritor, uno de los principales investigadores de la historia de Ocaña y del departamento de Norte de Santander. Miembro de la Academia Colombiana de Historia, dedicó su vida a la preservación del patrimonio histórico de la región. Sus obras son una fuente esencial para el conocimiento de la historia local.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/federico-acosta.jpg" class="image">
+                            <img src="../img/federico-acosta.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Federico Lleras Acosta (1877-1938)
+                            </h3>
+                            <p>Científico y médico nacido en Ocaña, famoso por su trabajo en el estudio de enfermedades tropicales. Su contribución al entendimiento y tratamiento de la lepra y la malaria le valió reconocimiento internacional. Lleras Acosta es una de las figuras más importantes en la historia médica de Colombia.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                        <div class="card swiper-slide">
-                            <div class="image-content">
-                                <span class="overlay"></span>
-
-                                <div class="card-image">
-                                    <!-- Incluir aquí el video -->
-                                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="card-video"></iframe>
-                                </div>
-                                <div class="card-content">
-                                    <h2 class="name">Lorem Ipsum</h2>
-
-                                    <button class="button">View More</button>
-                                </div>
-                            </div>
+                    </article>
+                    <article>
+                        <a href="../img/agustina-ferro.jpg" class="image">
+                            <img src="../img/agustina-ferro.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Agustina Ferro (1770-1820)</h3>
+                            <p>Agustina Ferro, nacida en Ocaña, fue una patriota que apoyó la causa independentista de Colombia. Contribuyó brindando recursos y apoyo a los insurgentes durante las guerras de independencia, demostrando su valentía y compromiso con la lucha por la libertad.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
                         </div>
-                    </div>
+                    </article>
+                    <article>
+                        <a href="../img/barbara-lemus.jpg" class="image">
+                            <img src="../img/barbara-lemus.jpg" alt="" style="width: 360px; height: 360px;"/>
+                        </a>
+                        <div class="caption">
+                            <h3>Bárbara Vicenta Lemus (1798-1884)</h3>
+                            <p>Bárbara Vicenta Lemus, también ocañera, fue una destacada colaboradora de las tropas patriotas durante la independencia. A lo largo de su vida, fue testigo de la consolidación de la República, representando el importante rol de las mujeres en la construcción de la nación.</p>
+                            <ul class="actions fixed">
+                                <li><span class="button small">Details</span></li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-             </div>
-             <div class="swiper-button-next swiper-navBtn"></div>
-             <div class="swiper-button-prev swiper-navBtn"></div>
-             <div class="swiper-pagination"></div>
         </section>
 
-        <section id="tours">
-            <h2>Recorridos Religiosos</h2>
-            <div class="tours-info">
-                <div class="tour-info">
+        <div class="history-zones">
+            <h1>Recorridos religiosos</h1>
+            <div class="zones-video">
+                <div class="video">
                     <h3>Lorem Ipsum</h3>
-                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
                 </div>
-                <div class="tour-info">
+                <div class="video">
                     <h3>Lorem Ipsum</h3>
-                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
                 </div>
-                <div class="tour-info">
+            </div>
+            <div class="zones-video">
+                <div class="video">
                     <h3>Lorem Ipsum</h3>
-                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-tour"></iframe>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+                </div>
+                <div class="video">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
                 </div>
             </div>
-        </section>
-
-        <section class="general">
-            <div class="general-1">
-                <h2>Geografia</h2>
-                <p>Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183 metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana. Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida cotidiana de los habitantes de Ocaña.</p>
-                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+            <div class="zones-video">
+                <div class="video">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+                </div>
+                <div class="video">
+                    <h3>Lorem Ipsum</h3>
+                    <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-info"></iframe>
+                </div>
             </div>
-            <div class="general-2"></div>
-        </section>
-    
-        <section class="general">
-            <div class="general-3"></div>
-            <div class="general-1">
-                <h2>Economia</h2>
-                <p>
-                    Ocaña, un municipio con una amplia variedad de actividades económicas, se destaca por su comercio,
-                    pequeñas industrias y agricultura, especialmente en cultivos como el tabaco, aguacate, cebolla roja,
-                    piña, frijol, frutas y verduras. Además, la minería es importante en la región, con exportaciones de
-                    plata, cobre e hierro. El turismo también es relevante, con sitios históricos como el santuario de
-                    Nuestra Señora de Torcoroma y la columna de la libertad de los esclavos.
-                </p>
-                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Econom%C3%ADa" class="btn-1">Información</a>
+        </div>
+         <center><h2>Monumentos Religiosos</h2></center>
+         <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+            <div class="content">
+                <h2>Cristo Rey</h2>
+                <p>Monumento en una colina con una gran estatua de Cristo que domina la ciudad. Es un sitio de peregrinación y contemplación, famoso por su vista panorámica de Ocaña. El Cristo Rey es un símbolo de protección y espiritualidad, siendo uno de los monumentos más representativos de la ciudad.</p>
+            </div>
+            <div class="image">
+                <img src="../img/Cristo-rey.png" alt="" />
             </div>
         </section>
 
-        <section class="general">
-            <div class="general-1">
-                <h2>Geografia</h2>
-                <p>
-                    Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183
-                    metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana.
-                    Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias
-                    en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida
-                    cotidiana de los habitantes de Ocaña.
-                </p>
-                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+    <!-- Three -->
+        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>Catedral de Santa Ana</h2>
+                <p>Principal templo de Ocaña, ubicado en el corazón de la ciudad en el parque 29 de mayo. La catedral es un edificio de estilo colonial dedicado a Santa Ana, patrona de la ciudad, y es el centro de las celebraciones religiosas más importantes.</p>
             </div>
-            <div class="general-2"></div>
-        </section>
-
-        <section class="general">
-            <div class="general-3"></div>
-            <div class="general-1">
-                <h2>Economia</h2>
-                <p>
-                    Ocaña, un municipio con una amplia variedad de actividades económicas, se destaca por su comercio,
-                    pequeñas industrias y agricultura, especialmente en cultivos como el tabaco, aguacate, cebolla roja,
-                    piña, frijol, frutas y verduras. Además, la minería es importante en la región, con exportaciones de
-                    plata, cobre e hierro. El turismo también es relevante, con sitios históricos como el santuario de
-                    Nuestra Señora de Torcoroma y la columna de la libertad de los esclavos.
-                </p>
-                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Econom%C3%ADa" class="btn-1">Información</a>
+            <div class="image">
+                <img src="../img/catedral-santa-ana.jpg" alt="" />
             </div>
         </section>
 
-        <section class="general">
-            <div class="general-1">
-                <h2>Geografia</h2>
+    <!-- Four -->
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>Santuario del Agua de la Virgen</h2>
                 <p>
-                    Ocaña es una ciudad en Colombia, en un valle con el río Grande al oeste. Tiene una altitud de 1,183
-                    metros y un clima de 17°C. Su relieve variado incluye grandes montañas que impiden la expansión urbana.
-                    Con 632.27 km² de extensión, parte urbana y parte rural. El clima varía entre frío y calor, con lluvias
-                    en marzo, abril, agosto, septiembre, octubre y noviembre. La ubicación geográfica beneficia la vida
-                    cotidiana de los habitantes de Ocaña.
-                </p>
-                <a href="https://es.wikipedia.org/wiki/Oca%C3%B1a_(Colombia)#Geograf%C3%ADa" class="btn-1">Información</a>
+                Ubicado en la vereda Aguas Claras, este santuario es conocido por las aguas que se creen milagrosas. Es un lugar de peregrinación donde los fieles acuden en busca de curaciones y favores. Se dice que la Virgen se apareció en este lugar, lo que lo convierte en uno de los sitios religiosos más venerados de la región.</p>
             </div>
-            <div class="general-2"></div>
+            <div class="image">
+                <img src="../img/agua-de-la-virgen.jpg" alt="" />
+            </div>
         </section>
+</div>
+
+<footer class="pie-pagina">
+    <div class="grupo-1">
+        <div class="box">
+            <figure>
+                <a href="#">
+                    <img src="../img/new-logo.png" alt="Logo Histocultural">
+                </a>
+            </figure>
+        </div>
+        <div class="box">
+            <h2>SOBRE NOSOTROS</h2>
+            <p>Histocultural es una plataforma dedicada a preservar y compartir la historia y cultura de Ocaña, Norte de Santander. Nuestro propósito es conectar a las personas con el legado de nuestra ciudad, destacando eventos clave como la Convención de 1828, personajes como Antonia Santos, y monumentos emblemáticos como la Columna de la Libertad de los Esclavos. A través de contenidos accesibles y educativos, buscamos promover el orgullo ocañero y mantener vivas nuestras tradiciones para las generaciones futuras.</p>
+        </div>
+        <div class="box">
+            <h2>SIGUENOS</h2>
+            <div class="red-social">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-youtube"></a>
+            </div>
+        </div>
     </div>
-
-    <footer class="pie-pagina">
-        <div class="grupo-1">
-            <div class="box">
-                <figure>
-                    <a href="#">
-                        <img src="../img/new-logo.png" alt="Logo Histocultural">
-                    </a>
-                </figure>
-            </div>
-            <div class="box">
-                <h2>SOBRE NOSOTROS</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
-            </div>
-            <div class="box">
-                <h2>SIGUENOS</h2>
-                <div class="red-social">
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-instagram"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-youtube"></a>
-                </div>
-            </div>
-        </div>
-        <div class="grupo-2">
-            <small>&copy; 2024 <b>Histocultural</b> - Todos los Derechos Reservados.</small>
-        </div>
-    </footer>
-
-    <!-- Swiper JS -->
-     <script src="../js/swiper-bundle.min.js"></script>
+    <div class="grupo-2">
+        <small>&copy; 2024 <b>Histocultural</b> - Todos los Derechos Reservados.</small>
+    </div>
+</footer>
 
      <!-- JavaScript -->
-      <script src="../js/script.js"></script>
+      <script src="../js/functions.js"></script>
+      <script src="../js/main.js"></script>
       <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+      <script src="../js/jquery.min.js"></script>
+		 <script src="../js/jquery.scrollex.min.js"></script>
+		 <script src="../js/jquery.scrolly.min.js"></script>
+		 <script src="../js/browser.min.js"></script>
+		 <script src="../js/breakpoints.min.js"></script>
+		 <script src="../js/util.js"></script>
+		 <script src="../js/main.js"></script>
+		 <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
 </body>
 </html>
