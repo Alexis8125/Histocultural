@@ -13,12 +13,21 @@ body {
     width: 100vw;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+li {
+    list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* css to reset all the designs */
+
+/* add styles on elements */
+
 .header {
+    border-bottom: 1px solid #E2E8F0;
+    /* background-color: #222; */
     background-image: linear-gradient(
         rgba(0,0,0,0.7),
         rgba(0,0,0,0.7)),
@@ -26,74 +35,108 @@ body {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
+    height: 530px;
 }
 
-.menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    color: #fffdfc;
+    align-items: center;
+    padding: 1.5rem 1.5rem;
     font-size: 25px;
-    font-weight: 800;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
+.hamburger {
+    display: none;
 }
 
-.menu .navbar ul li a {
-    font-size: 18px;
-    padding: 20px;
-    color: #fffdfc;
+.bar {
     display: block;
-    font-weight: 600;
-}
-
-.menu .navbar ul li a:hover{
-    color: #CE967B;
-}
-
-#menu {
-    display: none;
-}
-
-.menu-icono {
     width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    /* background-color: #101010; */
+    background-color: #fff;
 }
 
-.menu label {
-    cursor: pointer;
-    display: none;
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.header-content {
-    text-align: center;
+.nav-item {
+    margin-left: 5rem;
 }
 
-.header-content h1 {
-    font-size: 5vw;
-    line-height: 80px;
-    color: #f9fafc;
-    text-transform: uppercase;
-    margin-bottom: 35px;
+.nav-link {
+    /* font-size: 1.6rem; */
+    font-size: 2rem;
+    font-weight: 400;
+    /* color: #475569; */
+    color: #fff;
+    /* change */
 }
 
-.header-content p {
-    font-size: 16px;
-    color: #c5c5c5;
-    padding: 0 250px;
-    margin-bottom: 25px;
+.nav-link:hover {
+    color: #482ff7;
+}
+
+.nav-logo {
+    /* font-size: 2.1rem; */
+    font-size: 3rem;
+    font-weight: 500;
+    /* color: #482ff7; */
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        /* background-color: #fff; */
+        background-color: #222;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link {
+        color: #fff;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
 }
 
 .btn-1{

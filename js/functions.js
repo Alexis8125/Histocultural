@@ -1,23 +1,21 @@
-// Selecciona el primer elemento con la clase ".navbar" que representa el menú de navegación
-let enlaces_header = document.querySelectorAll(".navbar")[0];
-let ico_hamburguer = true;
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
 
-// Añade un event listener al icono de hamburguesa para mostrar/ocultar el menú
-document.querySelectorAll(".hamburguer")[0].addEventListener("click", function() {
-    if (ico_hamburguer) {
-        document.querySelectorAll(".hamburguer")[0].style.color = "#fff";
-        ico_hamburguer = false;
-    } else {
-        document.querySelectorAll(".hamburguer")[0].style.color = "#000";
-        ico_hamburguer = true;
-    }
+			hamburger.addEventListener("click", mobileMenu);
 
-    // Alterna la clase "hamburgueropen" para mostrar/ocultar el menú
-    enlaces_header.classList.toggle("hamburgueropen");
-});
+			function mobileMenu() {
+				hamburger.classList.toggle("active");
+				navMenu.classList.toggle("active");
+			}
 
-// Cuando se hace clic en el menú, oculta el menú y cambia el color del icono
-document.querySelectorAll(".navbar")[0].addEventListener("click", function() {
-    enlaces_header.classList.toggle("hamburgueropen");
-    document.querySelectorAll(".hamburguer")[0].style.color = "#000";
-});
+
+			// when we click on hamburger icon its close 
+
+			const navLink = document.querySelectorAll(".nav-link");
+
+			navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+			function closeMenu() {
+				hamburger.classList.remove("active");
+				navMenu.classList.remove("active");
+			}
