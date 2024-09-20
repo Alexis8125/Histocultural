@@ -25,6 +25,54 @@
             background-size: cover;
             height: 530px;
         }
+
+
+        .general-info{
+            width: 100%;
+            padding: 5%;
+        }
+        .ocana-info{
+				display: flex;
+				flex-direction: column;
+				width: 90%;
+				text-align: center;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.ocana-zones{
+				width: 100%;
+				display: flex;
+			}
+
+			.politic-info{
+				display: flex;
+				flex-direction: column;
+				width: 50%;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+			}
+
+			.photo-politic{
+				width: 220px;
+				height: 220px;
+				border-radius: 20%;
+			}
+
+            @media only screen and (max-width:900px) {
+				.ocana-zones{
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+				}
+
+				.politic-info{
+					width: 90%;
+					margin-top: 10%;
+				}
+			}
     </style>
 </head>
 <body>
@@ -58,9 +106,23 @@
     
     <div class="culture-container">
         <section id="appearances">
-            <div class="appearance-info">
-                <h2>Apariciones Religiosas</h2>
-                <iframe src="https://www.youtube.com/embed/1cTCD-ajdoA?si=TbIc_OLbq93WNC7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="video-appearance" style="margin-bottom: 2%;"></iframe>
+            <div class="general-info">
+                <center><div class="ocana-info">
+                    <h2>Apariciones Religiosas</h2>
+                    <p>Las apariciones religiosas en Ocaña han dejado una huella profunda en la espiritualidad y la identidad de la comunidad. Estos eventos, en los que figuras sagradas se han manifestado a los fieles, han fomentado un sentido de fe renovada y unidad. La devoción que surge de estas experiencias se traduce en celebraciones, tradiciones y un compromiso duradero con la vida religiosa, reforzando la conexión entre los ocañeros y su herencia espiritual.</p>
+                </div></center>
+                <div class="ocana-zones">
+                    <div class="politic-info">
+                        <img src="../img/virgen-torcoroma.jpg" alt="Virgen de Torcoroma" class="photo-politic">
+                        <strong><h3>Virgen de Torcoroma</h3></strong>
+                        <p>La aparición de la Virgen de Torcoroma ocurrió en 1711 en Ocaña, cuando unos campesinos encontraron una tabla con su imagen en la montaña de Torcoroma. Este evento fue visto como milagroso, y desde entonces, la Virgen es venerada como la patrona de Ocaña. Cada 16 de agosto, miles de fieles celebran su festividad con devoción y peregrinaciones al santuario en su honor.</p>
+                    </div>
+                    <div class="politic-info">
+                        <img src="../img/jesus-cautivo.jpg" alt="Jesus Cautivo" class="photo-politic">
+                        <strong><h3>Jesus Cautivo</h3></strong>
+                        <p>La historia de Jesús Cautivo en Ocaña comienza en 1938, cuando una imagen del Cristo en cautiverio fue traída a la ciudad por un grupo de fieles. Se dice que, al ser colocada en la iglesia, comenzaron a suceder milagros y favores entre los devotos. La imagen ha sido objeto de gran veneración durante la Semana Santa miles de fieles participan en procesiones, mostrando su devoción y pidiendo intercesiones. Jesús Cautivo se ha convertido en un símbolo de sufrimiento y esperanza para la comunidad.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -211,18 +273,18 @@
                 <p>Monumento en una colina con una gran estatua de Cristo que domina la ciudad. Es un sitio de peregrinación y contemplación, famoso por su vista panorámica de Ocaña. El Cristo Rey es un símbolo de protección y espiritualidad, siendo uno de los monumentos más representativos de la ciudad.</p>
             </div>
             <div class="image">
-                <img src="../img/Cristo-rey.png" alt="" />
+                <img src="../img/monument-cristo-rey.jpg" alt="" />
             </div>
         </section>
 
     <!-- Three -->
         <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
             <div class="content">
-                <h2>Catedral de Santa Ana</h2>
-                <p>Principal templo de Ocaña, ubicado en el corazón de la ciudad en el parque 29 de mayo. La catedral es un edificio de estilo colonial dedicado a Santa Ana, patrona de la ciudad, y es el centro de las celebraciones religiosas más importantes.</p>
+                <h2>Monumento a la virgen de Torcoroma</h2>
+                <p>Este monumento, ubicado en el corazón de Ocaña, rinde homenaje a la Virgen de Torcoroma, la patrona de la ciudad. La estatua es un símbolo de la fe ocañera y conmemora su aparición milagrosa en 1711. En el Parque 29 de Mayo, la imagen de la Virgen es un punto de devoción y encuentro para los fieles, especialmente durante su festividad cada 16 de agosto.</p>
             </div>
             <div class="image">
-                <img src="../img/catedral-santa-ana.jpg" alt="" />
+                <img src="../img/monument-virgen-parque-central.jpg" alt="" />
             </div>
         </section>
 
@@ -234,7 +296,28 @@
                 Ubicado en la vereda Aguas Claras, este santuario es conocido por las aguas que se creen milagrosas. Es un lugar de peregrinación donde los fieles acuden en busca de curaciones y favores. Se dice que la Virgen se apareció en este lugar, lo que lo convierte en uno de los sitios religiosos más venerados de la región.</p>
             </div>
             <div class="image">
-                <img src="../img/agua-de-la-virgen.jpg" alt="" />
+                <img src="../img/monument-agua-de-la-virgen.jpg" alt="" />
+            </div>
+        </section>
+
+        <section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>Monumento a la virgen del Carmen</h2>
+                <p>Este monumento honra a la Virgen del Carmen, patrona de los conductores y viajeros. La estatua, ubicada en un espacio destacado de Ocaña, es visitada por quienes buscan su protección y bendiciones, especialmente por quienes transitan las carreteras. La devoción a la Virgen del Carmen es profundamente arraigada en la cultura ocañera, y su festividad el 16 de julio reúne a fieles en procesiones y actos de fe.</p>
+            </div>
+            <div class="image">
+                <img src="../img/monument-virgen-carmen.jpg" alt="" />
+            </div>
+        </section>
+
+        <section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+            <div class="content">
+                <h2>Monumento de la Santa Cruz</h2>
+                <p>
+                    Ubicado en una colina cercana a Ocaña, el Monumento de la Santa Cruz es un símbolo de fe y devoción para la comunidad. Erigido en honor a la cruz cristiana, es un lugar frecuentado por fieles, especialmente durante la Semana Santa, quienes realizan peregrinaciones y actos de reflexión espiritual. Además de su significado religioso, el sitio ofrece vistas panorámicas de la ciudad, convirtiéndolo en un espacio de recogimiento y contemplación para los ocañeros y visitantes.</p>
+            </div>
+            <div class="image">
+                <img src="../img/SANTA CRUZ CASTELLANOS3.jpg" alt="" />
             </div>
         </section>
 </div>

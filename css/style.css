@@ -147,12 +147,7 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-}
-
-.video-appearance{
-    width: 800px;
-    height: 450px;
+    width: 50%;
 }
 
 .history-zones{
@@ -194,6 +189,64 @@ a {
     width: 350px;
 }
 
+.art-container{
+    width: 100vw;
+    /*  */
+}
+
+.museum-muralist{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-museum-muralist{
+    width: 800px;
+    height: 450px;
+    margin-bottom: 4%;
+}
+
+.art{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.art-gallery{
+    width: 100%;
+    background-color:#E1E2E6;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../img/bg2.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.art-content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.art-info{
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-art{
+    padding: 5%;
+}
+
 #museum{
     width: 100vw;
     background-color: #fff;
@@ -222,6 +275,67 @@ a {
     width: 220px;
     height: 220px;
     border: 1px solid #CE967B;
+}
+
+.writers{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-writers{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.writers{
+    width: 100%;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+
+.writer-info{
+    display: flex;
+    flex-direction: column;
+    padding: 2%;
+    border: 1px solid #333;
+    border-radius: 27px;
+    width: 30%;
+}
+
+.writer-title{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+
+.writer-photo{
+    width: 150px;
+    height: 150px;
+}
+
+.content-festivities{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2%;
+}
+
+.carnivals, .desfile{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-carnivals{
+    height: 198px;
+    width: 350px;
 }
 
 /*:::::Pie de Pagina*/
@@ -324,11 +438,61 @@ a {
         width: 500px;
         height: 281px;
     }
+
+    .video-museum-muralist{
+        width: 500px;
+        height: 281px;
+    }
+
+    .art-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .art-info{
+        width: 90%;
+    }
+
+    .content-writers{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .writer-info{
+        width: 90%;
+        margin-bottom: 3%;
+    }
+
+    .writer-title{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .video-appearance{
+    .video-museum-muralist{
         width: 300px;
         height: 169px;
+    }
+
+    .art-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-art{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content-festivities{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
