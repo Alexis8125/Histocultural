@@ -182,23 +182,19 @@
 				.css('overflow-x', browser.mobile ? 'scroll' : 'hidden')
 				.scrollLeft(0);
 
-		// Style #1.
-			// ...
-
-		// Style #2.
+		
+				
 			$('.gallery')
 				.on('wheel', '.inner', function(event) {
 
 					var	$this = $(this),
 						delta = (event.originalEvent.deltaX * 10);
 
-					// Cap delta.
 						if (delta > 0)
 							delta = Math.min(25, delta);
 						else if (delta < 0)
 							delta = Math.max(-25, delta);
 
-					// Scroll.
 						$this.scrollLeft( $this.scrollLeft() + delta );
 
 				})
